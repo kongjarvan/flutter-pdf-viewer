@@ -1,16 +1,28 @@
-# pdfviewer
+syncfusion pdf viewer
 
-A new Flutter project.
 
-## Getting Started
+###############dependency###################
 
-This project is a starting point for a Flutter application.
+dependencies:
+  flutter:
+    sdk: flutter
+  syncfusion_flutter_pdfviewer: ^21.1.38
 
-A few resources to get you started if this is your first Flutter project:
+############### 사용법 ###################
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+  late PdfViewerController _pdfViewerController; // 컨트롤러 선언
+  final GlobalKey<SfPdfViewerState> _pdfViewerStateKey = GlobalKey(); // 키 선언
+  
+    @override
+  void initState() {
+    _pdfViewerController = PdfViewerController();
+    _pdfViewerController.zoomLevel = 1; // 배율 설정
+    super.initState();
+  }
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+  
+  
+ SfPdfViewer 위젯을 통해 pdf 파일을 읽을 수 있음.
+  
+  위젯에 대한 자세한 내용은 https://pub.dev/packages/syncfusion_flutter_pdfviewer/install 에서 확인 가능
+  
